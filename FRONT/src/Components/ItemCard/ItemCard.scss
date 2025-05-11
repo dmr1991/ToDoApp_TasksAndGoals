@@ -1,0 +1,6 @@
+.button-container {
+  display: flex;
+  gap: 3rem; // separates the buttons
+  justify-content: center; // to center the buttons
+  flex-wrap: wrap; // in case they stack in mobile version
+}

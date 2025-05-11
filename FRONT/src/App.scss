@@ -1,0 +1,85 @@
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background: linear-gradient(
+    180deg,
+    rgba(58, 71, 213, 1) 0%,
+    rgba(0, 210, 255, 1) 100%
+  );
+  width: 100%;  /* fills the whole width */
+  min-height: 100vh; /* fills the whole height of the screem */
+  overflow-y: auto;
+}
+
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+
+.MainContainer {
+  width: 100%; /* fills the whole width of the screen */
+  margin: 0 auto; /* centers the container */
+  height: 100vh; /* fills the whole height of screen */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-grow: 1;
+}
+.ToDoContainer {
+  width: 90%; /* fills the whole width of the screen */
+  margin: 0 auto; /* centers the container  */
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.btn-desktop {
+  width: 100%;
+  justify-content: center;
+}
+.FormContainer {
+  width: 45%;
+  height: 100%;
+  padding: 2rem 1rem 2rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.ItemCardContainer {
+  width: 55%;
+  max-width: 1200px;
+  display: flex;
+  padding: 2rem 2rem 2rem 1rem;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.card-blue {
+  background-color: #00e1ff00 !important; /* transparent */
+  color: #ffffff !important; /* white */
+  border: dashed 1px white !important; /* white border */
+  border-radius: 0px !important; 
+}
+
+@media (max-width: 768px) {
+  .ToDoContainer {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+  }
+
+  .FormContainer,
+  .ItemCardContainer {
+    width: 100%;
+    padding: 0 1rem;
+  }
+
+  .FormContainer {
+    display: none;
+  }
+}

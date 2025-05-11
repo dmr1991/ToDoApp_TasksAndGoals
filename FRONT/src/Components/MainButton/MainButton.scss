@@ -1,0 +1,14 @@
+.custom-btn {
+
+  background-color: hsla(235, 100%, 78%, 0.45) !important; /* semi transparent lilac */
+  color: #000000; /* black text*/
+  border: none;
+  width: 40%;
+  border-color: white !important;
+  transition: background-color 0.3s ease;
+}
+
+.custom-btn:hover {
+  background-color: #a999fb !important; /* lilac */
+  color: #000000; /* black text*/
+}

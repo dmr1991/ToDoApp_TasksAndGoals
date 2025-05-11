@@ -1,0 +1,30 @@
+/* Change the background and border of Bootstrap inputs */
+.form-control {
+  background-color: #ffffff; /* white */
+  color: #002820; /* Dark text color */
+  padding: 0.5rem; /* Padding inside the input */
+  border-radius: 8px; /* Rounded corners */
+}
+.mainForm label {
+  display: block; /* makes label a block to cover the whole line */
+
+  text-align: left; /* asures labels are aligned to left */
+  color: #ffffff; /* label color */
+}
+.mainForm input[type="date"] {
+  color: #525857;  /* txt color in inputs */
+}
+/* Change the color when the input is focused */
+.form-control:focus {
+  background-color: #fff; /* White background when the input is focused */
+  border-color: #002820; /* Dark  border */
+  outline: none; 
+}
+.mainForm {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+

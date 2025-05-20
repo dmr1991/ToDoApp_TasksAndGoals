@@ -3,6 +3,6 @@ module.exports = function (req, res, next) {
   if (apiKey === 'dinamorales') {
     next();
   } else {
-    res.status(401).json({ error: 'Unauthorized' });
+    res.status(401).json({ error: 'Unauthorized, invalid Key' });
   }
 };

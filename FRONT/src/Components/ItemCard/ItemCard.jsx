@@ -13,13 +13,21 @@ function ItemCard({
 }) {
   const dispatch = useDispatch(); // Initializes useDispatch
   
+  const formattedDate = date
+    ? new Date(date).toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      })
+    : "";
+
   return (
     <Card className={`mb-2 ${cardClassName} w-100`}>
       <Card.Body>
         <Card.Title>{titleName}</Card.Title>
         <Card.Text>{description}</Card.Text>
         <Card.Title>{titleDate}</Card.Title>
-        <Card.Text>{date}</Card.Text>
+        <Card.Text>{formattedDate}</Card.Text>
         <div className="button-container">
           <CustomButton className="custom-btn" onClick={onDelete}>
             Remove

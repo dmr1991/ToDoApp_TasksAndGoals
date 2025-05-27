@@ -9,8 +9,8 @@ function AddItemForm({
   labelDescription = "Description",
   placeholderDescription = "Enter description",
   labelDueDate = "Due Date",
-  onAddItem, // props from app.jsx
-  viewMode, // props from app.jsx
+  onAddItem, // function that received new item to add from parent
+  viewMode, // checks if tasks or goals
 }) {
   const [taskName, setTaskName] = useState("");
   const [taskDescription, setTaskDescription] = useState("");
@@ -19,8 +19,13 @@ function AddItemForm({
   const handleSubmit = (e) => {
     e.preventDefault();
 
+    if (!taskName || !taskDescription || !taskDueDate) {
+      alert("Please fill in all fields.");
+      return;
+    }
+
     const newItem = {
-      id: new Date().getTime(),
+      // No ID here so that backend can generate it
       name: taskName,
       description: taskDescription,
       dueDate: taskDueDate,
@@ -28,6 +33,7 @@ function AddItemForm({
 
     onAddItem(newItem);
 
+    // clean form after sending data
     setTaskName("");
     setTaskDescription("");
     setTaskDueDate("");
